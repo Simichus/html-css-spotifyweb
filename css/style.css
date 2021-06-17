@@ -22,6 +22,10 @@ body{
     flex-direction: column;
 }
 
+.ta-c{
+    text-align: center;
+}
+
 /****** BODY ******/
 
 /* Header */
@@ -91,10 +95,54 @@ header a{
 
 #main-nav-sec main{
     width: calc(100vw - 75px);
+    padding: 0 15px;
     padding-top: 100px;
     padding-bottom: 10px;
     background-color: #141922;
     overflow-y: auto;
+}
+
+#main-nav-sec main ul{
+    list-style-type: none;
+
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#main-nav-sec main ul a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300;
+    padding: 10px 5px;
+}
+
+#main-nav-sec main .recently-played{
+    margin-top: 20px;
+   
+}
+
+#main-nav-sec main .recently-played h2{
+    margin: 20px 0;
+}
+
+#main-nav-sec main .recently-played img{
+    width: 90%;
+    padding: 0 auto;
+
+}
+
+#main-nav-sec main h4, #main-nav-sec main h6{
+    margin: 10px auto;
+}
+
+#main-nav-sec main h6{
+    color: lightgray;
+}
+
+#main-nav-sec main .authors img{
+    border-radius: 50%;
 }
 
 /* Footer */
@@ -111,5 +159,9 @@ footer{
     #main-nav-sec nav{
         width: 200px;
     } 
+
+    #main-nav-sec main{
+        width: calc(100vw - 200px);
+    }
     
 }
