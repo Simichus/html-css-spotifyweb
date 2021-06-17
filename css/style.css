@@ -1,0 +1,50 @@
+/****** RESET ******/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/****** UTILITIES ******/
+
+
+/****** BODY ******/
+
+/* Header */
+
+header{
+    position: fixed;
+    height: 100px;
+    width: calc(100% - 75px);
+    margin-left: 75px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* nav + main section */
+
+#main-nav-sec > *{
+    height: calc(100vh - 150px);
+}
+
+#main-nav-sec nav{
+    width: 75px;
+    background-color: black;
+}
+
+#main-nav-sec main{
+    flex-grow: 1;
+    background-color: #141922;
+    overflow-y: auto;
+}
+
+/* Footer */
+
+footer{
+    height: 150px;
+    background-color: #282828;
+}
