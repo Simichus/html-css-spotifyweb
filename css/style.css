@@ -8,10 +8,18 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 /****** UTILITIES ******/
 
+.d-none{
+    display: none;
+}
+
+.fd-col{
+    flex-direction: column;
+}
 
 /****** BODY ******/
 
@@ -34,6 +42,34 @@ header{
 #main-nav-sec nav{
     width: 75px;
     background-color: black;
+    padding: 10px 0;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-nav-sec nav img{
+    width: 30px;
+    margin: 10px auto;
+}
+
+#main-nav-sec nav figure{
+    background-color: gray;
+    margin: 0 10px;
+    padding: 0px 12px;
+    border-radius: 50%;
+}
+
+#main-nav-sec nav .arrow-down{
+    text-align: center;
+    padding: 2px;
+    margin: 10px 18px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+#main-nav-sec nav figure img{
+    width: 20px;
 }
 
 #main-nav-sec main{
@@ -47,4 +83,14 @@ header{
 footer{
     height: 150px;
     background-color: #282828;
+}
+
+/****** small size ******/
+
+@media screen and (min-width: 576px) {
+
+    #main-nav-sec nav{
+        width: 200px;
+    } 
+    
 }
