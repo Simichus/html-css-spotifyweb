@@ -63,6 +63,7 @@ header a{
     width: 75px;
     background-color: black;
     padding: 10px 0;
+    overflow-y: auto;
 
     justify-content: space-between;
     align-items: center;
@@ -167,7 +168,7 @@ footer > .row > *{
 }
 
 footer figure img{
-    margin-right: 10px;
+    margin-right: 4px;
     height: 40px;
 }
 
@@ -176,7 +177,7 @@ footer .row figure{
 }
 
 footer .col-3{
-    padding: 2px;
+    padding: 10px;
 
     justify-content: space-between;
     align-items: center;
@@ -184,13 +185,17 @@ footer .col-3{
 }
 
 footer .col-3 h4{
-    margin: 4px;
+    margin: 4px 1px;
     font-size: 14px;
 }
 
 footer .col-3 span{
-    margin: 4px 2px;
-    font-size: 10px;
+    margin: 4px 1px;
+    font-size: 8px;
+}
+
+footer .col-3 span:last-child{
+    margin-left: 0;
 }
 
 
@@ -331,7 +336,20 @@ footer .progress-bar-active{
         flex-wrap: nowrap;
     }
 
-    /* footer .col-3 .icons i{
+    footer .col-3 .icons i{
         margin-left: 10px;
-    }*/
+    }
+
 } 
+
+@media screen and (min-width:768px) {
+    
+    footer .col-3 h4{
+        font-size: 18px;
+    }
+    
+    footer .col-3 span{
+        font-size: 12px;
+    }
+    
+}
