@@ -37,7 +37,7 @@ header{
     margin-left: 75px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: right;
-    padding-right: 15px;
+    padding-right: 30px;
 
     justify-content: flex-end;
     align-items: center;
@@ -69,12 +69,21 @@ header a{
     flex-wrap: nowrap;
 }
 
+#main-nav-sec nav .top-imgs figure{
+    align-items: center;
+}
+
 #main-nav-sec nav img{
     width: 30px;
     margin: 10px auto;
 }
 
-#main-nav-sec nav figure{
+#main-nav-sec nav .bottom-imgs .row{
+    justify-content: center;
+}
+
+
+#main-nav-sec nav .profile{
     background-color: gray;
     margin: 0 10px;
     padding: 0px 12px;
@@ -83,18 +92,18 @@ header a{
 
 #main-nav-sec nav .arrow-down{
     text-align: center;
-    padding: 2px;
+    padding: 4px 6px;
     margin: 10px 18px;
     border: 1px solid white;
     border-radius: 50%;
 }
 
-#main-nav-sec nav figure img{
+#main-nav-sec nav .profile img{
     width: 20px;
 }
 
 #main-nav-sec main{
-    width: calc(100vw - 75px);
+    width: calc(100% - 75px);
     padding: 0 15px;
     padding-top: 100px;
     padding-bottom: 10px;
@@ -150,6 +159,7 @@ header a{
 footer{
     height: 100px;
     background-color: #282828;
+    font-size: 14px;
 }
 
 footer > .row > *{
@@ -157,27 +167,32 @@ footer > .row > *{
 }
 
 footer figure img{
+    margin-right: 10px;
     height: 40px;
 }
 
+footer .row figure{
+    flex-wrap: nowrap;
+}
+
 footer .col-3{
-    padding: 10px;
+    padding: 2px;
 
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
 }
 
-
 footer .col-3 h4{
     margin: 4px;
     font-size: 14px;
 }
 
-footer .col-3 h6{
-    margin: 2px;
+footer .col-3 span{
+    margin: 4px 2px;
     font-size: 10px;
 }
+
 
 footer .icons{
     flex-direction: column;
@@ -232,12 +247,91 @@ footer .progress-bar-active{
 
 @media screen and (min-width: 576px) {
 
-    #main-nav-sec nav{
-        width: 200px;
-    } 
+    /****** Utils ******/
 
-    #main-nav-sec main{
-        width: calc(100vw - 200px);
+    .d-sm-none{
+        display: none;
     }
     
+    .d-sm-block{
+        display: block;
+    }
+    
+    /****** Body ******/
+    
+    /* Header */
+    
+    header{
+        margin-left: 230px;
+    }
+    
+    /* main nav section */
+    
+    #main-nav-sec nav{
+        width: 230px;
+    } 
+
+    #main-nav-sec main, header{
+        width: calc(100% - 230px);
+    }
+    
+    #main-nav-sec nav .top-imgs img{
+        margin: 15px 15px;
+    }
+   
+    
+    #main-nav-sec nav .top-imgs #main-logo{
+        width: 70%;
+        align-self: center;
+        margin-left: 0;
+    }
+
+    #main-nav-sec nav .playlist{
+        color: gray;
+        padding-left: 15px;
+    }
+
+    #main-nav-sec nav .playlist h3{
+        color: white;
+    }
+
+    #main-nav-sec nav .playlist .col-12{
+        margin: 10px 0;
+
+        align-items: center;
+    }
+
+    #main-nav-sec nav .playlist .plus{
+        padding: 10px 15px;
+        margin: 10px 0;
+        margin-right: 10px;
+        font-size: 30px;
+        color: black;
+        background-color: gray;
+    }
+
+    #main-nav-sec nav .bottom-imgs{
+        width: 90%;
+    }
+
+    #main-nav-sec nav .bottom-imgs .row{
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #main-nav-sec nav .bottom-imgs hr{
+        margin: 10px 0;
+    }
+
+
+    /* footer */
+
+    footer .col-3 .icons{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    footer .col-3 .icons i{
+        margin-left: 10px;
+    }
 }
