@@ -41,6 +41,7 @@ body{
 
 header{
     position: fixed;
+    z-index: 1;
     height: 100px;
     width: calc(100% - 75px);
     margin-left: 75px;
@@ -60,6 +61,10 @@ header a{
     padding: 10px 30px;
     border: 1px solid white;
     border-radius: 30px;
+}
+
+header a:hover{
+    transform: scale(1.05);
 }
 
 /* nav + main section */
@@ -135,6 +140,11 @@ header a{
     color: white;
     font-weight: 300;
     padding: 10px 5px;
+    border-bottom: 2px solid transparent;
+}
+
+#main-nav-sec main ul a:hover{
+    border-bottom: 2px solid chartreuse;
 }
 
 #main-nav-sec main .recently-played{
@@ -163,6 +173,35 @@ header a{
 #main-nav-sec main .authors img{
     border-radius: 50%;
 }
+
+#main-nav-sec main .song-image{
+    position: relative;
+}
+
+#main-nav-sec main .song-image .play-button{
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 98.5%;
+    width: 90%;
+    visibility: hidden;
+    position: absolute;
+
+    top: 0;
+    left: 5%;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+#main-nav-sec main .song-image:hover .play-button{
+    visibility: visible;
+}
+
+#main-nav-sec main .authors .song-image .play-button{
+    border-radius: 50%;
+}
+
 
 /* Footer */
 
@@ -230,9 +269,13 @@ footer .col-6 > *{
     margin-bottom: 15px;
 }
 
-footer .col-6 .col-8, footer .col-3 .col-6{
+footer .col-6 .col-12, footer .col-3 .col-6, footer .col-12 .col-8{
     justify-content: center;
     align-items: center;
+}
+
+footer .col-6 .col-12 i{
+    padding: 0 8px;
 }
 
 footer .col-3 .col-2{
@@ -258,11 +301,11 @@ footer .progress-bar-active{
     position: relative;
 }
 
-footer .progress-bar-active:hover{
+footer .progress-bar-bg:hover .progress-bar-active{
     background-color: chartreuse;
 }
 
-footer .progress-bar-active:hover .progress-bar-end-hover{
+footer .progress-bar-bg:hover .progress-bar-active .progress-bar-end-hover{
     display: block;
     position: absolute;
     background-color: #fff;
