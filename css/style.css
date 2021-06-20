@@ -8,7 +8,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: gray;
     background-color: black;
 }
 
@@ -24,6 +24,15 @@ body{
 
 .ta-c{
     text-align: center;
+}
+
+.hover:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.c-white{
+    color: white;
 }
 
 /****** BODY ******/
@@ -246,6 +255,23 @@ footer .progress-bar-active{
     height: 100%;
     border-radius: 2px;
     background-color: #fff;
+    position: relative;
+}
+
+footer .progress-bar-active:hover{
+    background-color: chartreuse;
+}
+
+footer .progress-bar-active:hover .progress-bar-end-hover{
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /****** small size ******/
