@@ -35,6 +35,10 @@ body{
     color: white;
 }
 
+.overflow{
+    overflow: auto;
+}
+
 /****** BODY ******/
 
 /* Header */
@@ -77,11 +81,15 @@ header a:hover{
     width: 75px;
     background-color: black;
     padding: 10px 0;
-    overflow-y: auto;
+    overflow-y: hidden;
 
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+}
+
+#main-nav-sec nav .playlist-name{
+    height: 300px;
 }
 
 #main-nav-sec nav .top-imgs figure{
